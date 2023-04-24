@@ -2,7 +2,7 @@
 
 while true do
 	local event, key = os.pullEvent("key")
-	if key == keys.up 
+	if key == keys.up then
 turtle.forward()
 	elseif key == keys.down 
 turtle.back()
