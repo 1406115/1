@@ -12,11 +12,11 @@ end
   
   while true do
     checkFuel()
-  
+  mePos = vector.new(gps.locate())
+
     masterPos = vector.new(q1, q2, q3)
 
-    mePos = vector.new(gps.locate())
-
+    
 
     toMaster = masterPos - mePos
   if toMaster ~= 0 then do
