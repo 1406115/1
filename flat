@@ -71,4 +71,4 @@ end
       end
 end
 end
-shell.run("down","q1","q2","q3")
+shell.run("down q1 q2 q3")
