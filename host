@@ -24,11 +24,11 @@ if key == 'd' then -- right
 rednet.send(bot, 'right')
 print('Right')
 end
-if key == 200 then
+if key == 'up' then
 rednet.send(bot, 'up')
 print('Up')
 end
-if key == 208 then
+if key == 'down' then
 rednet.send(bot, 'down')
 print('Down')
 end
