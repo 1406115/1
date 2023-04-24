@@ -14,7 +14,7 @@ end
     checkFuel()
   mePos = vector.new(gps.locate())
 
-    masterPos = vector.new(q1, q2, q3)
+    masterPos = vector.new(mePos.x, 256, mePos.z)
 
     
 
