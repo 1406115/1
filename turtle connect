@@ -21,18 +21,10 @@ shell.run('clear') --clear the screen
  turtle.turnRight()
  end
  if text == 'up' then
- if turtle.detectUp() then
- turtle.digUp()
- else
  turtle.up()
  end
- end
  if text == 'down' then
- if turtle.detectDown() then
- turtle.digDown()
- else
  turtle.down()
- end
  end
  
  
