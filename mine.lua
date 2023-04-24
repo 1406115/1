@@ -24,7 +24,7 @@ end
     toRight = (toMaster.z)
 
     -- Move forward/backward (X axis)
-    if (toForward > 1) or (toForward < -1) then
+    if (toForward > 0) or (toForward < 0) then
       if toForward >= 0 then
         turtle.forward()
       else
@@ -33,7 +33,7 @@ end
     end
 
     -- Move up/down (Y axis)
-    if (toUp > 1) or (toUp < -1) then
+    if (toUp > 0) or (toUp < 0) then
       if toUp >= 0 then
         turtle.up()
       else
@@ -43,7 +43,7 @@ end
 
     -- Move right/left (Z axis)
     -- Turns it's face always to East (Forward: +X, Up: +Y, Right: +Z)
-    if (toRight > 1) or (toRight < -1) then
+    if (toRight > 0) or (toRight < 0) then
       if toRight >= 0 then
         turtle.turnRight()
         for i=1,toRight do
