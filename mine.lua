@@ -1,6 +1,6 @@
 -- General turtle functions
 function checkFuel()
-  if turtle.getFuelLevel() <= 10
+  if turtle.getFuelLevel() <= 10 then
     turtle.select(16)
     turtle.refuel(64)
   end
