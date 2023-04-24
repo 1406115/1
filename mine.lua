@@ -19,6 +19,7 @@ end
 
 
     toMaster = masterPos - mePos
+  if toMaster ~= 0 then do
 
 
     toForward = (toMaster.x)
