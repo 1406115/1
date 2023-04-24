@@ -4,11 +4,11 @@ while true do
 	local event, key = os.pullEvent("key")
 	if key == keys.up then
 turtle.forward()
-	elseif key == keys.down 
+	elseif key == keys.down then
 turtle.back()
-	elseif key == keys.left 
+	elseif key == keys.left then
 turtle.turnLeft()
-	elseif key == keys.right 
+	elseif key == keys.right then
 turtle.turnright()  
 	elseif key == keys.q then
 		break
