@@ -1,0 +1,16 @@
+
+
+while true do
+	local event, key = os.pullEvent("key")
+	if key == keys.up 
+turtle.forward()
+	elseif key == keys.down 
+turtle.back()
+	elseif key == keys.left 
+turtle.turnLeft()
+	elseif key == keys.right 
+turtle.turnright()  
+	elseif key == keys.q then
+		break
+	end
+end
