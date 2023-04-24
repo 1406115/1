@@ -19,9 +19,9 @@ end
     toMaster = masterPos - mePos
 
     -- Calculate coordinates, move accordingly
-    toForward = (toMaster.x - (toMaster.x % 1))
-    toUp = (toMaster.y - (toMaster.y % 1))
-    toRight = (toMaster.z - (toMaster.z % 1))
+    toForward = (toMaster.x)
+    toUp = (toMaster.y)
+    toRight = (toMaster.z)
 
     -- Move forward/backward (X axis)
     if (toForward > 1) or (toForward < -1) then
