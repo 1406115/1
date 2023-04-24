@@ -71,4 +71,4 @@ end
       end
 end
 end
-shell.run("goto","q1","q2","q3")
+shell.run("flat","q1","q2","q3")
