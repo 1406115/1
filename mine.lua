@@ -1,4 +1,3 @@
--- General turtle functions
 function checkFuel()
   if turtle.getFuelLevel() <= 10 then
     turtle.select(16)
@@ -7,57 +6,62 @@ function checkFuel()
 end
   
   while true do
-    -- Refuel first if needed
     checkFuel()
-
+  
     masterPos = vector.new(66, 63, -7)
 
-    -- Get own location
     mePos = vector.new(gps.locate())
 
-    -- Calculate the vector the path to master
+
     toMaster = masterPos - mePos
 
-    -- Calculate coordinates, move accordingly
+
     toForward = (toMaster.x)
     toUp = (toMaster.y)
     toRight = (toMaster.z)
 
-    -- Move forward/backward (X axis)
     if (toForward > 0) or (toForward < 0) then
       if toForward >= 0 then
+      turtle.dig()
         turtle.forward()
       else
-        turtle.back()
+      turtle.turnLeft()
+      turtle.turnLeft()
+       turtle.dig()
+        turtle.forward()
+      turtle.turnRight()
+      turtle.turnRight()
       end
     end
 
-    -- Move up/down (Y axis)
+
     if (toUp > 0) or (toUp < 0) then
       if toUp >= 0 then
+      turtle.digUp()
         turtle.up()
       else
+      turtle.digDown()
         turtle.down()
       end
     end
 
-    -- Move right/left (Z axis)
-    -- Turns it's face always to East (Forward: +X, Up: +Y, Right: +Z)
     if (toRight > 0) or (toRight < 0) then
       if toRight >= 0 then
         turtle.turnRight()
         for i=1,toRight do
+        turtle.dig()
           turtle.forward()
         end
         turtle.turnLeft()
       else
         turtle.turnLeft()
         for i=toRight,0 do
+         turtle.dig()
           turtle.forward()
         end
         turtle.turnRight()
       end
     end
 
-    -- break
+
 end
