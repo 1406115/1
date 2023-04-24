@@ -1,3 +1,8 @@
+local tArgs = { ... }
+local q1    = tonumber( tArgs[1] )
+local q2    = tonumber( tArgs[2] )
+local q3    = tonumber( tArgs[3] )
+
 function checkFuel()
   if turtle.getFuelLevel() <= 10 then
     turtle.select(16)
@@ -8,7 +13,7 @@ end
   while true do
     checkFuel()
   
-    masterPos = vector.new(66, 63, -7)
+    masterPos = vector.new(q1, q2, q3)
 
     mePos = vector.new(gps.locate())
 
