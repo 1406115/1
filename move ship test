@@ -21,10 +21,11 @@ if r2 >= -1 then
 if r2 <= 1 then 
 helm.move("up",false)
 helm.move("down",false)
-if turn.roll ~= 1.5 then
-helm.move("left",true)
-else 
+if turn.roll <= 1.6 then
+if turn.roll >= 1.4 then
 helm.move("left",false)
+else 
+helm.move("left",true)
 end
 end
 end
