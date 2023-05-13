@@ -1,0 +1,26 @@
+local helm = peripheral.find("ship_helm")
+local reader = peripheral.find("ship_reader")
+local tArgs = {...}
+local q1 = to number( tArgs[1] )
+local q2 = to number( tArgs[2] )
+local q3 = to number( tArgs[3] )
+while true do 
+pos = reader.get WorldspacePosition()
+sleep(0.01)
+r1 = (pos.x - q1)
+r2 = (pos.y - q2)
+r3 = (pos.z - q3)
+if r2 <= -2 then
+helm.move("up",true)
+else
+if r2 >=2 then
+helm.move("down",true)
+else
+if r2 >= -1 and
+if r2 <= 1 then do
+helm.move("up",false)
+helm.move("down",false)
+end
+end
+end
+end
