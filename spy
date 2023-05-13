@@ -1,6 +1,6 @@
-local reader = perippheral.find("ship_reader")
+local reader = peripheral.find("ship_reader")
 local pos = reader.getWorldspacePosition()
-rednet.opern('front')
+rednet.open('front')
 while true do
 
 rednet.send(2,pos.x,'x')
