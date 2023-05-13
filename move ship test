@@ -1,9 +1,9 @@
 local helm = peripheral.find("ship_helm")
 local reader = peripheral.find("ship_reader")
 local tArgs = { ... }
-local q1 = to number( tArgs[1] )
-local q2 = to number( tArgs[2] )
-local q3 = to number( tArgs[3] )
+local q1 = tonumber( tArgs[1] )
+local q2 = tonumber( tArgs[2] )
+local q3 = tonumber( tArgs[3] )
 while true do 
 pos = reader.getWorldspacePosition()
 turn = reader.getRotation()
