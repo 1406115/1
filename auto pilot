@@ -1,0 +1,47 @@
+local helm = peripheral.find("ship_helm")
+local reader = peripheral.find("ship_reader")
+local tArgs = { ... }
+local q1 = tonumber( tArgs[1] )
+local q2 = tonumber( tArgs[2] )
+local q3 = tonumber( tArgs[3] )
+while true do 
+pos = reader.getWorldspacePosition()
+turn = reader.getRotation()
+sleep(0.01)
+r1 = (pos.x - q1)
+r2 = (pos.y - q2)
+r3 = (pos.z - q3)
+if r2 <= -2 then
+helm.move("up",true)
+else
+if r2 >=2 then
+helm.move("down",true)
+else
+if r2 <=1 and
+  r2 >=-1 then  
+helm.move("up",false)
+helm.move("down",false)
+if turn.roll <= 1.6 and
+ turn.roll >= 1.22 then
+helm.move("left",false)
+else
+helm.move("left",true) 
+end
+if  r1 <= -6  then  
+helm.move("forward",true) 
+else
+if r1 >= 6 then
+helm.move("back",true) 
+else
+if r1 >= -5 and
+ r1 <= 5 then do 
+helm.move("back",false)
+helm.move("forward",false)  
+end
+end
+end
+end
+end
+end
+end
+end
