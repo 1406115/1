@@ -41,8 +41,23 @@ end
 end
 end
 end
+if red == true then
+if turn.roll <= 3.2 and
+turn.roll >= 2.8 or
+if turn.roll <= -2.8 and
+turn.roll >= -3.2 then 
+helm.move("right",false)
+else
+helm.move("right",true) 
 end
 end
-if red == true
-print("it works cunt")
+if r3 > 7  then  
+helm.move("back",true) 
+else
+if r3 < -7 then
+helm.move("forward",true) 
+else
+helm.move("back",false)
+helm.move("forward",false)
+end
 end
