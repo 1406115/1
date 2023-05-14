@@ -34,8 +34,10 @@ if r1 >= 10 then
 helm.move("back",true)
 else
 if r1 >= -10 and
-r1 <= 10 then 
-helm.move(
+r1 <= 10 then do
+helm.move("forward",false)
+helm.move("back",false)
+end
 end
 end
 end
