@@ -12,6 +12,17 @@ sleep(0.01)
 r1 = (pos.x - q1)
 r2 = (pos.y - q2)
 r3 = (pos.z - q3)
+if red == true then
+print("yes")
+if turn.roll <= 3.2 and
+ turn.roll >= 2.5 or 
+ turn.roll <= -2.5 and
+ turn.roll >= -3.2 then
+helm.move("right",false)
+else 
+if r1 >= 7 or r1 <= -7
+helm.move("right",true)     
+else
 if r2 <= -2 then
 helm.move("up",true)
 else
