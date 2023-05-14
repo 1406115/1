@@ -5,8 +5,9 @@ local q1 = tonumber( tArgs[1] )
 local q2 = tonumber( tArgs[2] )
 local q3 = tonumber( tArgs[3] )
 while true do 
-pos = reader.getWorldspacePosition()
-turn = reader.getRotation()
+local pos = reader.getWorldspacePosition()
+local turn = reader.getRotation()
+local red = rs.getInput("front")
 sleep(0.01)
 r1 = (pos.x - q1)
 r2 = (pos.y - q2)
@@ -16,27 +17,36 @@ helm.move("up",true)
 else
 if r2 >=2 then
 helm.move("down",true)
-else
-if r2 >= -1 and
-r2 <= 1 then 
+else  
 helm.move("up",false)
 helm.move("down",false)
-if turn.roll <= 1.55 and
- turn.roll >= 1.45 then
-helm.move("left",false)
-else 
+if red == false then
+if  turn.roll >= 1.6 or
+turn.roll <= 1.22 then 
 helm.move("left",true)
-then
-if r1 <= -10 then
-helm.move("forward",true)
 else
-if r1 >=10 then
-helm.move("back",true)
+helm.move("left",false)  
+if r1 > 7  then  
+helm.move("back",true) 
 else
-if r1 >= -9 and
-r1 <= 9 then 
-helm.move("forward",false)
+if r1 < -7 then
+helm.move("forward",true) 
+else
 helm.move("back",false)
+helm.move("forward",false)
+rs.setOutput("back",true)
+if red == true then
+print("yes")
+sleep(0.01)
+if turn.roll <= 3.2 and
+ turn.roll >= 2.5 or 
+ turn.roll <= -2.5 and
+ turn.roll >= -3.2 then
+helm.move("right",false)
+else  
+helm.move("right",true)     
+end
+end
 end
 end
 end
