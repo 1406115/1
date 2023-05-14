@@ -17,15 +17,25 @@ else
 if r2 >=2 then
 helm.move("down",true)
 else
-if r2 >= -1 then
-if r2 <= 1 then 
+if r2 >= -1 and
+r2 <= 1 then 
 helm.move("up",false)
 helm.move("down",false)
-if turn.roll <= 1.7 then
-if turn.roll >= 1.3 then
+if turn.roll <= 1.55 and
+ turn.roll >= 1.45 then
 helm.move("left",false)
 else 
 helm.move("left",true)
+then
+if r1 <= -10 then
+helm.move("forward",true)
+else
+if r1 >= 10 then
+helm.move("back",true)
+else
+if r1 >= -10 and
+r1 <= 10 then 
+helm.move(
 end
 end
 end
