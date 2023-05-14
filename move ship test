@@ -30,11 +30,11 @@ then
 if r1 <= -10 then
 helm.move("forward",true)
 else
-if r1 >= 10 then
+if r1 >=10 then
 helm.move("back",true)
 else
-if r1 >= -10 and
-r1 <= 10 then do
+if r1 >= -9 and
+r1 <= 9 then 
 helm.move("forward",false)
 helm.move("back",false)
 end
