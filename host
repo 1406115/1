@@ -18,7 +18,7 @@ print('Left')
 end
 if key == 'w' then --up
 rednet.send(bot, 'forward')
-print('Forward')
+print('up')
 end
 if key == 'd' then -- right
 rednet.send(bot, 'right')
