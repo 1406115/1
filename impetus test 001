@@ -1,0 +1,22 @@
+local Impetus = peripheral.wrap("bottom")
+rednet.open("right")
+while true do
+sleep(0.001)
+term.setCursorPos(1,1)
+local power = rs.getInput("left")
+local power2 = rs.getOutput("left")
+local casting = Impetus.isCasting()
+if power == true and casting == false or power2 == true and casting == false  then do
+Impetus.activateCircle()
+end
+end
+local senderId, message, protocol = rednet.receive()
+if senderId == 1 and message == "on" then do
+rs.setOutput("left",true)
+end
+end
+if senderId == 1 and message == "off" then do
+rs.setOutput("left",false)
+end
+end
+end
