@@ -21,6 +21,8 @@ end
 					local sign = 1
 					if mY < 0 then sign = -1 end
 					modules.launch(0, 90 * sign, math.min(4, math.abs(mY)))
+else 
+sleep(0)
 
 			end
 		end
