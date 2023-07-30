@@ -1,4 +1,5 @@
  local modules = peripheral.find("neuralInterface")
+calcGravity()
 while true do
  
 local test = modules.getBlockMeta(0, -2, 0)
@@ -11,22 +12,16 @@ sleep(0.2)
 else  
 sleep(0.001)
 end
-	function()
-		while true do
-			
-				-- We calculate the required motion we need to take
-				local mY = meta.motionY
-				mY = (mY - 0.138) / 0.8
-
-				-- If it is sufficiently large then we fire ourselves in that direction.
-				if mY > 0.5 or mY < 0 then
-					local sign = 1
-					if mY < 0 then sign = -1 end
-					modules.launch(0, 90 * sign, math.min(4, math.abs(mY)))
-				else
-					sleep(0)
-				end
-		
-			end
-		end
-	end
+local function calcGravity()
+    
+    local meta = modules.getMetaOwner()
+    modules.launch(0, -90, 4)
+    os.sleep(1)
+    meta = modules.getMetaOwner()
+    local speedY = meta.motionY
+    os.sleep(1)
+    meta = modules.getMetaOwner()
+    local acceleration = meta.motionY - speedY
+    print("Gravity on this planet is "..acceleration.." blocks per second.")
+    stop = true 
+end
