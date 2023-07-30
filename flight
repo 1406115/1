@@ -1,0 +1,28 @@
+ local modules = peripheral.find("neuralInterface")
+while true do
+ 
+local test = modules.getBlockMeta(0, -2, 0)
+local test1 = modules.getBlockMeta(0, -3, 0)
+local meta = modules.getMetaOwner()
+if meta.isSneaking then
+modules.launch(meta.yaw,meta.pitch, 4)
+print(textutils.serialise(test))
+sleep(0.2)
+else  
+sleep(0.001)
+end
+		while true do
+				-- We calculate the required motion we need to take
+				local mY = meta.motionY
+				mY = (mY - 0.138) / 0.8
+
+				-- If it is sufficiently large then we fire ourselves in that direction.
+				if mY > 0.5 or mY < 0 then
+					local sign = 1
+					if mY < 0 then sign = -1 end
+					modules.launch(0, 90 * sign, math.min(4, math.abs(mY)))
+
+			end
+		end
+	end,
+end
