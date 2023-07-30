@@ -11,7 +11,9 @@ sleep(0.2)
 else  
 sleep(0.001)
 end
+	function()
 		while true do
+			
 				-- We calculate the required motion we need to take
 				local mY = meta.motionY
 				mY = (mY - 0.138) / 0.8
@@ -21,10 +23,10 @@ end
 					local sign = 1
 					if mY < 0 then sign = -1 end
 					modules.launch(0, 90 * sign, math.min(4, math.abs(mY)))
-else 
-sleep(0)
-
+				else
+					sleep(0)
+				end
+		
 			end
 		end
-	end,
-end
+	end
