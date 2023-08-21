@@ -1,1 +1,2 @@
 myce's minecraft stuff
+door quick install "wget run https://raw.githubusercontent.com/1406115/1/main/door_install.lua?token=GHSAT0AAAAAACGRHIFL2JS7PMAG4Y37X5XUZHC7TGQ"
