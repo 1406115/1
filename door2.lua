@@ -1,1 +1,1 @@
-shell.run("door")
+shell.run("Door")
