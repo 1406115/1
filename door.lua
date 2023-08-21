@@ -1,7 +1,7 @@
 local detector = peripheral.find("playerDetector") -- calls the playerDetector
 local gpsx, gpsy, gpsz = gps.locate(5)
-local pos1  = {x = gpsx + 1 ,y = gpsy + 1,z = gpsz - 1} -- first set of cords 
-local pos2  = {x = gpsx - 1 ,y = gpsy + 3,z = gpsz + 1} -- second set of cords
+local pos1  = {x = gpsx + 2 ,y = gpsy + 1,z = gpsz - 1} -- first set of cords 
+local pos2  = {x = gpsx - 1 ,y = gpsy + 4,z = gpsz + 2} -- second set of cords
 while true do -- loops it so it always checks 
 player = detector.isPlayerInCoords(pos1 , pos2 , "potato1000000000")-- checks for just me 
 sleep(0.01) -- prevents it from having an error 
