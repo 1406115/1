@@ -13,4 +13,4 @@ use's scrollers to controll the animatronic controlls might need tweeked because
 
 --player tracker install "wget https://raw.githubusercontent.com/myce-the-mushroom/myces_lua_code/main/player_tracker.lua player_tracker" needs a pocket computer and a player detector(advanced peripherals)
 
-example input "player_tracker potato1000000000" start to track potato1000000000
+example input "player_tracker potato1000000000" starts to track potato1000000000
