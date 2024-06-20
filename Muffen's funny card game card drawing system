@@ -1,6 +1,5 @@
- value = math.random(1,40)
- local tArgs = { ... }
-
+value = math.random(1,40)
+local tArgs = { ... }
 local deck1 = {"Spider Krab","Spider Krab","Spider Krab","Spider Krab","Blahaj","Blahaj","Dagger Dolphin","Dagger Dolphin","Red Herring","Red Herring","Red Herring","Red Herring","Blue Herring","Blue Herring","Blue Herring","Blue Herring","Leach","Leach","Leach","Leach","Cheerleader Spider","Cheerleader Spider","Cheerleader Spider","Cheerleader Spider","Obsidian Urchin","Obsidian Urchin","F.M.B.","F.M.B.","Mist Ball","Mist Ball","Mist Ball","Mist Ball","Absorbing Slime","Absorbing Slime","Ghost Wyvern","Dragonip","Mystic Pot","Mystic Pot","Mystic Pot","Mystic Pot"}
 local deck2 = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card11","card12","card13","card14","card15","card16","card17","card18","card19","card20","card21","card22","card23","card24","card25","card26","card27","card28","card29","card30","card31","card32","card33","card34","card35","card36","card37","card38","card39","card40"}
 local deck3 = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card11","card12","card13","card14","card15","card16","card17","card18","card19","card20","card21","card22","card23","card24","card25","card26","card27","card28","card29","card30","card31","card32","card33","card34","card35","card36","card37","card38","card39","card40"}
