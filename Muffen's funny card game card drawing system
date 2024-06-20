@@ -1,1 +1,27 @@
+ value = math.random(1,40)
+ local tArgs = { ... }
 
+local deck1 = {"Spider Krab","Spider Krab","Spider Krab","Spider Krab","Blahaj","Blahaj","Dagger Dolphin","Dagger Dolphin","Red Herring","Red Herring","Red Herring","Red Herring","Blue Herring","Blue Herring","Blue Herring","Blue Herring","Leach","Leach","Leach","Leach","Cheerleader Spider","Cheerleader Spider","Cheerleader Spider","Cheerleader Spider","Obsidian Urchin","Obsidian Urchin","F.M.B.","F.M.B.","Mist Ball","Mist Ball","Mist Ball","Mist Ball","Absorbing Slime","Absorbing Slime","Ghost Wyvern","Dragonip","Mystic Pot","Mystic Pot","Mystic Pot","Mystic Pot"}
+local deck2 = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card11","card12","card13","card14","card15","card16","card17","card18","card19","card20","card21","card22","card23","card24","card25","card26","card27","card28","card29","card30","card31","card32","card33","card34","card35","card36","card37","card38","card39","card40"}
+local deck3 = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card11","card12","card13","card14","card15","card16","card17","card18","card19","card20","card21","card22","card23","card24","card25","card26","card27","card28","card29","card30","card31","card32","card33","card34","card35","card36","card37","card38","card39","card40"}
+local decks = {deck1,deck2,deck3}
+local deck = decks[tonumber( tArgs[1] )]
+function draw_from_deck(deck)
+  local draw = deck[value]
+  print(draw)
+  table.remove (deck,value)
+end
+ draw_from_deck(deck)
+while true do
+ local event, key, is_held = os.pullEvent("key")
+ if key == keys.space then
+  if deck[1] == nil and deck[2] == nil and deck[3] == nil and deck[4] == nil and deck[5] == nil and deck[6] == nil and deck[7] == nil and deck[8] == nil and deck[9] == nil and deck[10] == nil and deck[11] == nil and deck[12] == nil and deck[13] == nil and deck[14] == nil and deck[15] == nil and deck[16] == nil and deck[17] == nil and deck[18] == nil and deck[19] == nil and deck[20] == nil and deck[21] == nil and deck[22] == nil and  deck[23] == nil and deck[24] == nil and deck[25] == nil and deck[26] == nil and deck[27] == nil and deck[28] == nil and deck[29] == nil and deck[30] == nil and deck[31] == nil and deck[32] == nil and deck[33] == nil and deck[34] == nil and deck[35] == nil and deck[36] == nil and deck[37] == nil and  deck[38] == nil and deck[39] == nil and deck[40] == nil then
+   print("YOU LOSE")
+  else
+  repeat
+   value = math.random(1,40)
+  until(deck[value] ~= nil)
+  draw_from_deck(deck)
+  end
+ end
+end
