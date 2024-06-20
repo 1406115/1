@@ -11,7 +11,7 @@ function draw_from_deck(deck)
   textutils.slowPrint(draw)
   table.remove (deck,value)
 end
-textutils.slowPrint("starting hand is")
+textutils.slowPrint("starting hand is") 
 term.setTextColor( colors.yellow )
 for i=1,5 do
  repeat
