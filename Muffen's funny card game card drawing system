@@ -10,6 +10,11 @@ function draw_from_deck(deck)
   print(draw)
   table.remove (deck,value)
 end
+draw_from_deck(deck)
+draw_from_deck(deck)
+draw_from_deck(deck)
+draw_from_deck(deck)
+draw_from_deck(deck)
 while true do
  local event, key, is_held = os.pullEvent("key")
  if key == keys.space then
