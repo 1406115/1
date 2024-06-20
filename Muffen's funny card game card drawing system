@@ -24,7 +24,7 @@ while true do
    break
   else
   repeat
-   value = math.random(1,40)
+   value = math.random(1,#deck)
   until(deck[value] ~= nil)
   draw_from_deck(deck)
   end
