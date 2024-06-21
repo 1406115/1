@@ -13,7 +13,7 @@ else
  local deck3 = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card11","card12","card13","card14","card15","card16","card17","card18","card19","card20","card21","card22","card23","card24","card25","card26","card27","card28","card29","card30","card31","card32","card33","card34","card35","card36","card37","card38","card39","card40"}
  local deck4 = {"Absorbing Slime","Absorbing Slime","Absorbing Slime","Tree Spirit","Wood Golem","Wood Golem","Wood Golem","Wood Golem","Blue Goo","Blue Goo","Paper Slime","Paper Slime","Spider Krab","Spider Krab","Quicksand Snake","Quicksand Snake","Nibblr","Steelworm","Steelworm","Steelworm","Petrifex","Petrifex","Petrifex","Petrifex","Thunder Scarab","Thunder Scarab","Saxtooth","Saxtooth","Invasive Weed","Invasive Weed","Obsidian Urchin","Obsidian Urchin","Metal Morpher","Metal Morpher","Weed Slime","Weed Slime","Imortalitea","Imortalitea","Imortalitea","Imortalitea"}
  local decks = {pop = deck1 , myce = deck2 , admin = deck3 , artic = deck4}
- local prime_color = {pop = colors.orange , myce = colors.purple , admin = colors.white , artict = colors.green} 
+ local prime_color = {pop = colors.orange , myce = colors.purple , admin = colors.white , artic = colors.green} 
  local second_color = {pop = colors.lightGray , myce = colors.yellow , admin = colors.white , artic = colors.orange}
  local deck = decks[ tArgs[1] ]
  function draw_from_deck(deck)
