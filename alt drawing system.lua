@@ -19,7 +19,7 @@ else
   table.remove (deck,value)
  end
  if tArgs[2] ~= "cheats_on" then
-  value = math.random(1,#deck)
+local  value = math.random(1,#deck)
  term.setTextColor( prime_color[ tArgs[1] ] )
  textutils.slowPrint("Starting Hand:") 
  term.setTextColor( second_color[ tArgs[1] ] ) 
@@ -48,12 +48,11 @@ else
   end
  end
  else
-  value = 1
+local  value = 0
   term.setTextColor( prime_color[ tArgs[1] ] )
  textutils.slowPrint("Starting Hand:") 
  term.setTextColor( second_color[ tArgs[1] ] ) 
-  draw_from_deck(deck)
-  for i=1,4 do
+  for i=1,5 do
   repeat
    value = value + 1
    until(deck[value] ~= nil)
