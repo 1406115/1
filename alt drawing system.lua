@@ -1,5 +1,5 @@
 local tArgs = { ... }
-if tArgs[1] = nil then
+if tArgs[1] == nil then
  print("select a deck")
  term.setTextColor( colors.orange )
  print("-Pop's fish deck(pop)")
