@@ -19,7 +19,7 @@ else
   table.remove (deck,value)
  end
  if tArgs[2] ~= "cheats_on" then
-local  value = math.random(1,#deck)
+  value = math.random(1,#deck)
  term.setTextColor( prime_color[ tArgs[1] ] )
  textutils.slowPrint("Starting Hand:") 
  term.setTextColor( second_color[ tArgs[1] ] ) 
@@ -48,7 +48,7 @@ local  value = math.random(1,#deck)
   end
  end
  else
-local  value = 0
+  value = 0
   term.setTextColor( prime_color[ tArgs[1] ] )
  textutils.slowPrint("Starting Hand:") 
  term.setTextColor( second_color[ tArgs[1] ] ) 
