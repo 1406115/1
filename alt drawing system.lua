@@ -1,6 +1,12 @@
-term.setTextColor( colors.purple )
-value = math.random(1,40)
 local tArgs = { ... }
+if tArgs[1] = nil then
+print("select a deck")
+term.setTextColor( colors.orange )
+print("-Pop's fish deck")
+term.setTextColor( colors.purple )
+print("-Myce's myce deck")
+break
+end
 local deck1 = {"Spider Krab","Spider Krab","Spider Krab","Spider Krab","Blahaj","Blahaj","Dagger Dolphin","Dagger Dolphin","Red Herring","Red Herring","Red Herring","Red Herring","Blue Herring","Blue Herring","Blue Herring","Blue Herring","Leach","Leach","Leach","Leach","Cheerleader Spider","Cheerleader Spider","Cheerleader Spider","Cheerleader Spider","Obsidian Urchin","Obsidian Urchin","F.M.B.","F.M.B.","Mist Ball","Mist Ball","Mist Ball","Mist Ball","Absorbing Slime","Absorbing Slime","Ghost Wyvern","Dragonip","Mystic Pot","Mystic Pot","Mystic Pot","Mystic Pot"}
 local deck2 = {"UnMarketable Plushie","Britishroom","Britishroom","Britishroom","Britishroom","The Fungus","The Fungus","Mini Shroom","Mini Shroom","The Fungle","Cheerleader Spider","Spore Spreader","Munchshroom","Tri-Shroom","Tri-Shroom","M.9.","Pixie","M.9.","Pixie","Pathetic Shroom","Pathetic Shroom","Pathetic Shroom","Pathetic Shroom","Munchshroom","dndmyce","dndmyce","Mommy myce","Mommy myce","Pixie","Pixie","Tri-Shroom","Tri-Shroom","The Fungle","Cheerleader Spider","The Fungus","Marketable Plushie","Marketable Plushie","Marketable Plushie","Marketable Plushie","Marketable Plushie"}
 local deck3 = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card11","card12","card13","card14","card15","card16","card17","card18","card19","card20","card21","card22","card23","card24","card25","card26","card27","card28","card29","card30","card31","card32","card33","card34","card35","card36","card37","card38","card39","card40"}
@@ -9,13 +15,14 @@ local prime_color = {pop = colors.orange , myce = colors.purple , deck3}
 local second_color = {pop = colors.lightGray , myce = colors.yellow , deck3}
 local second_color = {pop = colors.lightGray , myce = colors.yellow , deck3} 
 local deck = decks[ tArgs[1] ]
+value = math.random(1,#deck)
 function draw_from_deck(deck)
   local draw = deck[value]
-  textutils.slowPrint(draw)
+  textutils.slowPrint(draw,2)
   table.remove (deck,value)
 end
 term.setTextColor( prime_color[ tArgs[1] ] )
-textutils.slowPrint("Starting Hand:") 
+textutils.slowPrint("Starting Hand:",2) 
 term.setTextColor( second_color[ tArgs[1] ] )
 for i=1,5 do
  repeat
@@ -35,7 +42,7 @@ while true do
    value = math.random(1,#deck)
   until(deck[value] ~= nil)
   term.setTextColor( prime_color[ tArgs[1] ] )
-  textutils.slowPrint("You drew:")
+  textutils.slowPrint("You drew:",2)
    term.setTextColor( second_color[ tArgs[1] ] )
   draw_from_deck(deck)
   end
