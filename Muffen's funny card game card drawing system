@@ -8,20 +8,17 @@ local decks = {pop = deck1 , myce = deck2 , deck3}
 local prime_color = {pop = deck1 , myce = colors.purple , deck3}
 local second_color = {pop = deck1 , myce = colors.yellow , deck3}
 local deck = decks[ tArgs[1] ]
-local deck_color_1 = prime_color[ tArgs[1] ]
-local deck_color_2 = second_color[ tArgs[1] ]
-term.setTextColor( prime_color[ tArgs[1] ] )
 function draw_from_deck(deck)
   local draw = deck[value]
   textutils.slowPrint(draw)
   table.remove (deck,value)
 end
-term.setTextColor( colors.purple )
+term.setTextColor( prime_color[ tArgs[1] ] )
 textutils.slowPrint("Starting Hand:") 
-term.setTextColor( colors.yellow )
+term.setTextColor( second_color[ tArgs[1] ] )
 for i=1,5 do
  repeat
-  value = math.random(1,40)
+  value = math.random(1,#deck)
   until(deck[value] ~= nil)
   draw_from_deck(deck)
 end
@@ -36,9 +33,9 @@ while true do
   repeat
    value = math.random(1,#deck)
   until(deck[value] ~= nil)
-  term.setTextColor( colors.purple )
+  term.setTextColor( prime_color[ tArgs[1] ] )
   textutils.slowPrint("You drew:")
-   term.setTextColor( colors.yellow )
+   term.setTextColor( second_color[ tArgs[1] ] )
   draw_from_deck(deck)
   end
  end
