@@ -6,7 +6,7 @@ local deck2 = {"UnMarketable Plushie","Britishroom","Britishroom","Britishroom",
 local deck3 = {"card1","card2","card3","card4","card5","card6","card7","card8","card9","card10","card11","card12","card13","card14","card15","card16","card17","card18","card19","card20","card21","card22","card23","card24","card25","card26","card27","card28","card29","card30","card31","card32","card33","card34","card35","card36","card37","card38","card39","card40"}
 local decks = {pop = deck1 , myce = deck2 , deck3}
 local prime_color = {pop = colors.orange , myce = colors.purple , deck3} 
-local second_color = {pop = colors.lightGray , myce = colors.yellow , deck3}
+local second_color = {pop = colors.lightGray , myce = colors.yellow , deck3} 
 local deck = decks[ tArgs[1] ]
 function draw_from_deck(deck)
   local draw = deck[value]
