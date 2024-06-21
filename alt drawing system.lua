@@ -49,12 +49,13 @@ else
  end
  else
   value = 0
+  e = 0
   term.setTextColor( prime_color[ tArgs[1] ] )
  textutils.slowPrint("Starting Hand:") 
  term.setTextColor( second_color[ tArgs[1] ] ) 
   for i=1,5 do
   repeat
-   value = value + 1
+   value = e + 1
    until(deck[value] ~= nil)
    draw_from_deck(deck)
   end
@@ -67,7 +68,7 @@ else
     break
    else
     repeat
-     value = value + 1
+     value = e + 1
     until(deck[value] ~= nil)
      term.setTextColor( prime_color[ tArgs[1] ] )
      textutils.slowPrint("You drew:")
