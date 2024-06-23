@@ -1,7 +1,7 @@
 local tArgs = { ... } 
 if tArgs[1] == nil then
  print("select a deck")
- term.setTextColor( colors.orange )
+ term.setTextColor( colors.orange ) 
  print("-Pop's fish deck(pop)")
  term.setTextColor( colors.purple )
  print("-Myce's myce deck(myce)")
