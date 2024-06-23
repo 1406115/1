@@ -6,13 +6,13 @@ while true do
     value = math.random(1,d20)
     print("you rolled", value)
  else 
-  if key == keys.up 
+  if key == keys.up then
    value = math.random(10,d20)
-   print("you rolled", value)
+   print("you rolled" ,value)
   else 
-  if key == keys.down 
+  if key == keys.down then
    value = 20
-   print("you rolled", value)
+   print("you rolled" ,value)
   end
   end
  end
