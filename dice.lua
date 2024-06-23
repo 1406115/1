@@ -13,7 +13,17 @@ while true do
   if key == keys.down then
    value = 20
    print("you rolled" ,value)
+     else 
+  if key == keys.left then
+   value = math.random(1,10)
+   print("you rolled" ,value)
+        else 
+  if key == keys.right then
+   value = 1
+   print("you rolled" ,value)
   end
+   end
   end
  end
+end
 end
